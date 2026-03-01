@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   compress: true,
   images: {
     formats: ['image/webp', 'image/avif'],
+    remotePatterns: [
+      {
+        // 노션 파일 업로드 서버 (로고 이미지)
+        protocol: 'https',
+        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
+      },
+      {
+        // 노션 외부 이미지
+        protocol: 'https',
+        hostname: '*.amazonaws.com',
+      },
+    ],
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],

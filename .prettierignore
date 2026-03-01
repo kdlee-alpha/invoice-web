@@ -39,3 +39,10 @@ Thumbs.db
 
 # Generated files
 next-env.d.ts
+
+# 문서 파일
+docs/
+ROADMAP.md
+
+# Claude Code 설정
+.claude/
